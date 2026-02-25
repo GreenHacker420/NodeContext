@@ -1,11 +1,10 @@
-#!/usr/bin/env node
-
 import * as os from "os";
 import * as path from "path";
 import { CRAGEngine } from "./ai/crag/CRAGEngine.js";
 import { CodeIngestionService } from "./ai/crag/CodeIngestionService.js";
 import { ContextGrader } from "./ai/crag/ContextGrader.js";
 import { HybridRetriever } from "./ai/crag/HybridRetriever.js";
+import { QueryEnhancer } from "./ai/crag/QueryEnhancer.js";
 import { Reranker } from "./ai/crag/Reranker.js";
 import { TokenOptimizer } from "./ai/crag/TokenOptimizer.js";
 import { AnswerGenerator } from "./ai/crag/AnswerGenerator.js";
@@ -27,12 +26,20 @@ const vectorStore = new VectraVectorStore(indexDir, embedModel);
 const llm = new OllamaLLM(model, temperature);
 
 const ingestionService = new CodeIngestionService(scanner, chunker, vectorStore);
+const queryEnhancer = new QueryEnhancer(vectorStore, llm, 6, 12);
 const retriever = new HybridRetriever(vectorStore);
 const grader = new ContextGrader(llm, 6);
 const reranker = new Reranker();
 const optimizer = new TokenOptimizer(maxTokens, 0.8);
 const generator = new AnswerGenerator(llm);
-const engine = new CRAGEngine(retriever, grader, reranker, optimizer, generator);
+const engine = new CRAGEngine(
+  queryEnhancer,
+  retriever,
+  grader,
+  reranker,
+  optimizer,
+  generator,
+);
 
 const app = new CLIApplication(ingestionService, engine);
 

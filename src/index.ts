@@ -14,11 +14,11 @@ import { RepositoryScanner } from "./infrastructure/filesystem/RepositoryScanner
 import { OllamaLLM } from "./infrastructure/llm/OllamaLLM.js";
 import { VectraVectorStore } from "./infrastructure/vectorstore/VectraVectorStore.js";
 
-const model = process.env.NODESAGE_CHAT_MODEL ?? "qwen2.5-coder:7b";
-const embedModel = process.env.NODESAGE_EMBED_MODEL ?? "nomic-embed-text";
-const temperature = Number(process.env.NODESAGE_TEMPERATURE ?? "0.1");
-const maxTokens = Number(process.env.NODESAGE_MAX_TOKENS ?? "6000");
-const indexDir = path.join(os.homedir(), ".nodesage", "crag-index");
+const model = process.env.NODECONTEXT_CHAT_MODEL ?? "qwen2.5-coder:7b";
+const embedModel = process.env.NODECONTEXT_EMBED_MODEL ?? "nomic-embed-text";
+const temperature = Number(process.env.NODECONTEXT_TEMPERATURE ?? "0.1");
+const maxTokens = Number(process.env.NODECONTEXT_MAX_TOKENS ?? "6000");
+const indexDir = path.join(os.homedir(), ".nodecontext", "crag-index");
 
 const scanner = new RepositoryScanner();
 const chunker = new LineChunker();

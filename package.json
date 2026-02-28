@@ -1,11 +1,11 @@
 {
-  "name": "nodesage",
+  "name": "nodecontext",
   "version": "2.0.0",
   "description": "RAG-powered repo Q&A and code fixer CLI — train any codebase, ask anything, fix issues — local, free, private",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
-    "nodesage": "dist/index.js"
+    "nodecontext": "dist/index.js"
   },
   "scripts": {
     "build": "tsc",

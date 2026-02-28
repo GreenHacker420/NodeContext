@@ -1,6 +1,6 @@
 # CRAG Pipeline
 
-NodeSage uses this pipeline:
+NodeContext uses this pipeline:
 
 `Enhance Query -> Retrieve -> Grade -> Correct -> Re-rank -> Optimize -> Generate`
 

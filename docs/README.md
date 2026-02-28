@@ -1,9 +1,9 @@
-# NodeSage Docs
+# NodeContext Docs
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-Docs-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Mermaid](https://img.shields.io/badge/Diagrams-Mermaid-FF3670?logo=mermaid&logoColor=white)](https://mermaid.js.org/)
 
-Implementation documentation for the CRAG-based NodeSage CLI.
+Implementation documentation for the CRAG-based NodeContext CLI.
 
 ## Documentation Map
 

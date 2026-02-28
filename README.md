@@ -1,4 +1,4 @@
-# NodeSage
+# NodeContext
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?logo=nodedotjs&logoColor=white)](https://nodejs.org/)
@@ -6,7 +6,7 @@
 [![Vectra](https://img.shields.io/badge/Vector%20Store-Vectra-1F6FEB)](https://www.npmjs.com/package/vectra)
 [![Commander](https://img.shields.io/badge/CLI-Commander-F2A900)](https://www.npmjs.com/package/commander)
 
-NodeSage is a TypeScript CLI implementing a production-style CRAG engine for codebase Q&A.
+NodeContext is a TypeScript CLI implementing a production-style CRAG engine for codebase Q&A.
 
 Pipeline:
 
@@ -131,14 +131,14 @@ node dist/index.js ask "Where is auth logic implemented?"
 
 Environment variables:
 
-- `NODESAGE_CHAT_MODEL` default `qwen2.5-coder:7b`
-- `NODESAGE_EMBED_MODEL` default `nomic-embed-text`
-- `NODESAGE_TEMPERATURE` default `0.1`
-- `NODESAGE_MAX_TOKENS` default `6000`
+- `NODECONTEXT_CHAT_MODEL` default `qwen2.5-coder:7b`
+- `NODECONTEXT_EMBED_MODEL` default `nomic-embed-text`
+- `NODECONTEXT_TEMPERATURE` default `0.1`
+- `NODECONTEXT_MAX_TOKENS` default `6000`
 
 Index path:
 
-- `~/.nodesage/crag-index`
+- `~/.nodecontext/crag-index`
 
 ## Project Structure
 

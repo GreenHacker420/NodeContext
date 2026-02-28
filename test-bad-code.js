@@ -1,4 +1,4 @@
-// Deliberately bad Node.js code for testing NodeSage
+// Deliberately bad Node.js code for testing NodeContext
 
 const express = require('express');
 const { exec } = require('child_process');

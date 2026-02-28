@@ -4,7 +4,7 @@
 
 ```mermaid
 flowchart TD
-  CLI["nodesage"] --> I["ingest [repo]"]
+  CLI["nodecontext"] --> I["ingest [repo]"]
   CLI --> A["ask <query>"]
 
   I --> I1["scan files"]
@@ -42,18 +42,18 @@ node dist/index.js ask "Show risky file access patterns"
 
 Environment variables:
 
-- `NODESAGE_CHAT_MODEL`
-- `NODESAGE_EMBED_MODEL`
-- `NODESAGE_TEMPERATURE`
-- `NODESAGE_MAX_TOKENS`
+- `NODECONTEXT_CHAT_MODEL`
+- `NODECONTEXT_EMBED_MODEL`
+- `NODECONTEXT_TEMPERATURE`
+- `NODECONTEXT_MAX_TOKENS`
 
 Example:
 
 ```bash
-NODESAGE_CHAT_MODEL=qwen2.5-coder:7b \
-NODESAGE_EMBED_MODEL=nomic-embed-text \
-NODESAGE_TEMPERATURE=0.1 \
-NODESAGE_MAX_TOKENS=6000 \
+NODECONTEXT_CHAT_MODEL=qwen2.5-coder:7b \
+NODECONTEXT_EMBED_MODEL=nomic-embed-text \
+NODECONTEXT_TEMPERATURE=0.1 \
+NODECONTEXT_MAX_TOKENS=6000 \
 node dist/index.js ask "How does ingestion work?"
 ```
 

@@ -11,7 +11,7 @@ export class CLIApplication {
 
   public async run(argv: string[]): Promise<void> {
     const program = new Command();
-    program.name("nodesage").description("CRAG-powered codebase assistant").version("3.0.0");
+    program.name("nodecontext").description("CRAG-powered codebase assistant").version("3.0.0");
 
     program
       .command("ingest [repo]")
